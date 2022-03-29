@@ -1,0 +1,17 @@
+<h1>Danh sách sản phẩm</h1>
+<table>
+  <tr>
+    <td>STT</td>
+    <td>Tên sản phẩm</td>
+    <td>Giá sản phẩm</td>
+    <td>Mô tả</td>
+  </tr>
+<!--  Directive: component directive, Structural Directive, StyleDirective-->
+<!--  Structural Directive: *ngFor => duyệt vòng lặp, *ngIf => để kiểm tra điều kiện-->
+  <tr *ngFor="let product of listProduct; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.description}}</td>
+  </tr>
+</table>
