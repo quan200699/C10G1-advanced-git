@@ -6,6 +6,7 @@
     <td>Tên sản phẩm</td>
     <td>Giá sản phẩm</td>
     <td>Mô tả</td>
+    <td>Edit</td>
   </tr>
 <!--  Directive: component directive, Structural Directive, StyleDirective-->
 <!--  Structural Directive: *ngFor => duyệt vòng lặp, *ngIf => để kiểm tra điều kiện-->
@@ -14,5 +15,6 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
+    <td><a routerLink="/products/edit/{{product.id}}">Edit</a></td>
   </tr>
 </table>

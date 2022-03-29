@@ -18,4 +18,12 @@ export class ProductService {
   public createProduct(product: Product): Observable<Product> {
     return this.http.post<Product>('http://localhost:8080/products', product);
   }
+
+  public editProduct(product: Product, id: number): Observable<Product> {
+    return this.http.put<Product>(`http://localhost:8080/products/${id}`, product);
+  }
+
+  public findProductById(id: number): Observable<Product> {
+    return this.http.get(`http://localhost:8080/products/${id}`);
+  }
 }
